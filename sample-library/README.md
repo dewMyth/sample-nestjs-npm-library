@@ -49,3 +49,36 @@ npm run build
 ```
 
 Now your NestJS based NPM library is ready to use.
+
+## Publish
+
+1. Login to your NPM account using the following command
+
+```bash
+npm login
+```
+
+2. Make `private:false` in the `package.json`
+
+3. Give a unique library name to publish it for free. (i.e replace the name attribute in the `package.json`)
+
+Example in this application
+
+```bash
+  "name": "sample-library-ghlm",
+
+```
+
+4. Finally publish the library using the following command
+
+```bash
+npm publish
+```
+
+5. If you want to update the library, you can update the version in the `package.json` and publish it again.
+
+6. For installing the library in your project, you can use the following command
+
+```bash
+npm install sample-library-ghlm
+```
