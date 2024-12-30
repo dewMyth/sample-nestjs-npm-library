@@ -1,12 +1,12 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from 'sample-library';
+import { MathService } from 'sample-library';
 
 @Controller()
 export class AppController {
-  constructor(private readonly app: AppService) {}
+  constructor(private mathService: MathService) {}
 
-  @Get()
-  getHello(): string {
-    return this.app.getHello();
+  @Get('add')
+  getAddition(): string {
+    return this.mathService.add(1, 2).toString();
   }
 }
